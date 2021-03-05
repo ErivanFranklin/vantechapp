@@ -1,0 +1,31 @@
+table {
+  width: 100%;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  margin: 50px 0px;
+}
+
+//TODO - add breakpoint to make the table according the size of the screen
+mat-card{
+  width: 80%;
+  padding: 0px;
+}
+
+.wrap-table{
+  padding: 4px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+@media (max-width: 820px) {
+  .table-cell-hidden{
+    display: none;
+  }
+}

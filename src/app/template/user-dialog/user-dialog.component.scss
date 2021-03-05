@@ -1,0 +1,31 @@
+.mat-dialog-content{
+  padding: 16px;
+}
+
+.mat-dialog-actions{
+  padding: 24px 24px 48px;
+}
+
+.mat-dialog-title{
+  margin: 0;
+}
+
+.mat-typography{
+  width: calc(8em * 5);
+}
+
+.custom-mat-form-field{
+  width: 100%;
+}
+
+.heading-box{
+  display: flex;
+  //align-items: center;
+  //justify-content: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0,0,0, .2);
+}
+

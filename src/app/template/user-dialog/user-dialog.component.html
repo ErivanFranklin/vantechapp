@@ -1,0 +1,57 @@
+<div class="mat-toolbar-single-row">
+  <h2 mat-dialog-title>{{user.firstName + " " + user.lastName}}</h2>
+  <span class="example-spacer"></span>
+  <button mat-button>
+    <mat-icon (click)="closeDialog()">close</mat-icon>
+  </button>
+</div>
+<mat-divider></mat-divider>
+<mat-dialog-content class="mat-typography" style="margin: 20px">
+
+  <div class="heading-box">
+    <p>{{this.user.firstName}} {{this.user.firstName}}</p>
+    <p>{{this.user.username}}</p>
+    <p>{{this.user.active}}</p>
+  </div>
+  <p>
+    <mat-form-field appearance="outline" class="custom-mat-form-field">
+      <mat-label>{{this.user.id}}</mat-label>
+      <input matInput placeholder="User ID" disabled="{{!this.edit}}">
+      <mat-icon matSuffix>perm_identity</mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline" class="custom-mat-form-field">
+      <mat-label>{{this.user.email}}</mat-label>
+      <input matInput placeholder="Email" disabled="{{!this.edit}}">
+      <mat-icon matSuffix>mail_outline</mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline" class="custom-mat-form-field">
+      <mat-label>{{this.user.role}}</mat-label>
+      <input matInput placeholder="Role" disabled="{{!this.edit}}">
+      <mat-icon matSuffix>security</mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline" class="custom-mat-form-field">
+      <mat-label>{{this.user.joinDate}}</mat-label>
+      <input matInput placeholder="Join date" disabled="{{!this.edit}}">
+      <mat-icon matSuffix>exit_to_app</mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline" class="custom-mat-form-field">
+      <mat-label [hidden]="this.user.isNotLocked">Account Unlocked</mat-label>
+      <mat-label [hidden]="!this.user.isNotLocked">Account Locked</mat-label>
+      <mat-label>{{this.user.isActive}}</mat-label>
+      <input matInput placeholder="Account status" disabled="{{!this.edit}}">
+      <mat-icon matSuffix>app_blocking</mat-icon>
+    </mat-form-field>
+  </p>
+</mat-dialog-content>
+<mat-divider></mat-divider>
+<mat-dialog-actions align="end">
+  <button [mat-dialog-close]="true" cdkFocusInitial mat-button>Close</button>
+</mat-dialog-actions>
